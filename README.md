@@ -114,4 +114,7 @@ def cart_detail(request):
    {{ value.price|multiply:value.quantity }}
  
 {% endfor %}
+
+{{cart_total_amount}}
+{{request.session.cart|length}}
 </pre>
