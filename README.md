@@ -38,8 +38,8 @@ CART_SESSION_ID = 'cart'
       
 <h4>Step 4 :- This right in views.py file.</h4>
 <pre>
-  from django.contrib.auth.decorators import login_required
-  from cart.cart import Cart
+from django.contrib.auth.decorators import login_required
+from cart.cart import Cart
 
 @login_required(login_url="/users/login")
 def cart_add(request, id):
