@@ -26,14 +26,14 @@ CART_SESSION_ID = 'cart'
 <hr>
 
 <h4>Step 3 :- You Can use the urls in following Way </h4>
-<p>
+<pre>
     path('cart/add/<int:id>/', views.cart_add, name='cart_add'),<br>
     path('cart/item_clear/<int:id>/', views.item_clear, name='item_clear'),<br>
     path('cart/item_increment/<int:id>/',views.item_increment, name='item_increment'),<br>
     path('cart/item_decrement/<int:id>/',views.item_decrement, name='item_decrement'),<br>
     path('cart/cart_clear/', views.cart_clear, name='cart_clear'), <br>
     path('cart/cart-detail/',views.cart_detail,name='cart_detail'),<br>
-</p>
+</pre>
 <hr>
       
 <h4>Step 4 :- This right in views.py file.</h4>
