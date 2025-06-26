@@ -17,22 +17,26 @@
     'cart',
 ]
 
-Add below line to settings context_processor::
-    'cart.context_processor.cart_total_amount'
+Add below line to settings context_processor:<br>
+    `'cart.context_processor.cart_total_amount'`
 
+```
 CART_SESSION_ID = 'cart'
+```
 </p>
 
 <hr>
 
 <h4>Step 3 :- You Can use the urls in following Way </h4>
 <pre>
-    path('cart/add/<int:id>/', views.cart_add, name='cart_add'),<br>
-    path('cart/item_clear/<int:id>/', views.item_clear, name='item_clear'),<br>
-    path('cart/item_increment/<int:id>/',views.item_increment, name='item_increment'),<br>
-    path('cart/item_decrement/<int:id>/',views.item_decrement, name='item_decrement'),<br>
-    path('cart/cart_clear/', views.cart_clear, name='cart_clear'), <br>
-    path('cart/cart-detail/',views.cart_detail,name='cart_detail'),<br>
+   ```python
+path('cart/add/&lt;int:id&gt;/', views.cart_add, name='cart_add'),
+path('cart/item_clear/&lt;int:id&gt;/', views.item_clear, name='item_clear'),
+path('cart/item_increment/&lt;int:id&gt;/', views.item_increment, name='item_increment'),
+path('cart/item_decrement/&lt;int:id&gt;/', views.item_decrement, name='item_decrement'),
+path('cart/cart_clear/', views.cart_clear, name='cart_clear'),
+path('cart/cart-detail/', views.cart_detail, name='cart_detail'),
+```
 </pre>
 <hr>
       
@@ -89,11 +93,13 @@ def cart_detail(request):
 
 <h4> Step 5 :- In the templates you can use the url in following way</h4>
 <p>
-  <a href="{% url 'cart_add' product.id %}">Add To Cart</a>
-  <a href="{% url 'cart_clear' %}">Clear Cart</a>
-  <a href="{% url 'item_increment' value.product_id %}">Increament</a>
-  <a href="{% url 'item_decrement' value.product_id %}">Decrement</a>
-  <a href="{% url 'item_clear' key %}">Item clear</a>
+<pre>
+&lt;a href="{% url 'cart_add' product.id %}"&gt;Add To Cart&lt;/a&gt;
+&lt;a href="{% url 'cart_clear' %}"&gt;Clear Cart&lt;/a&gt;
+&lt;a href="{% url 'item_increment' value.product_id %}"&gt;Increment&lt;/a&gt;
+&lt;a href="{% url 'item_decrement' value.product_id %}"&gt;Decrement&lt;/a&gt;
+&lt;a href="{% url 'item_clear' key %}"&gt;Item Clear&lt;/a&gt;
+</pre>
 </p>
 
 <hr>
